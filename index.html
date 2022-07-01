@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf Apps</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="head_bar text-center mb-5 p-3 bg-success">
+  <h1 class="head_bar__title text-white fw-bold">Bookshelf Apps</h1>
+</header>
+
+<div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Buku</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input mb-2">
+          <label for="editJudul">title</label>
+          <input id="editJudul" type="text" name="judul" class="form-control">
+        </div>
+        <div class="input mb-2">
+          <label for="editAuthor">author</label>
+          <input id="editAuthor" type="text" name="author" class="form-control">
+        </div>
+        <div class="input mb-2">
+          <label for="editYear">year</label>
+          <input id="editYear" type="text" name="year" class="form-control">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+        <button id="save" type="button" data-bs-dismiss="modal" class="btn btn-success">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 mb-5">
+        <section class="input_section">
+          <h2 class="text-center">Masukkan Buku Baru</h2>
+          <form id="inputBook">
+            <div class="input mb-3">
+              <label for="exampleInputEmail1" class="form-label">Judul</label>
+              <input type="text" class="form-control" id="inputBookTitle" required>
+            </div>
+            <div class="input mb-3">
+              <label for="exampleInputPassword1" class="form-label">Penulis</label>
+              <input type="text" class="form-control" id="inputBookAuthor" required>
+            </div>
+            <div class="input mb-3">
+              <label for="exampleInputPassword1" class="form-label">Tahun</label>
+              <input type="number" class="form-control" id="inputBookYear" required>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="inputBookIsComplete">
+              <label class="form-check-label" for="exampleCheck1">Selesai dibaca</label>
+            </div>
+            <button type="submit" id="bookSubmit" class="btn btn-success">Masukkan Buku ke rak</button>
+          </form>
+        </section>
+      </div>
+
+    <div class="row justify-content-center mb-3">
+      <div class="col-lg-6">
+        <section class="search_section mb-3">
+          <h2 class="text-center">Cari Buku (Opsional)</h2>
+          <form id="searchBook">
+            <div class="input-group">
+              <input id="searchBookTitle" type="text" class="form-control" placeholder="masukkan judul buku" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button id="searchSubmit" class="btn btn-success" type="submit">Cari</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <section class="book_shelf mb-3">
+          <h2>Belum selesai dibaca</h2>
+          <div id="incompleteBookshelfList" class="book_list">
+
+          </div>
+        </section>
+      </div>
+      <div class="col-lg-6">
+        <section class="book_shelf mb-3">
+          <h2>Selesai dibaca</h2>
+          <div id="completeBookshelfList" class="book_list">
+
+          </div>
+        </section>
+      </div>
+    </div>
+  </div> 
+</main>
+
+<script src="script/search.js"></script>
+<script src="script/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

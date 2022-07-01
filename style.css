@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+.card {
+    position: relative;
+    margin: 10px 0;
+}
+.card:hover {
+    border-left: 4px solid rgb(25, 135, 84);
+}
+.card #edit {
+    color: #fff;
+}
+.card .btn:nth-child(2) {
+    margin: 0 10px;
+}
+.card h3 {
+    font-size: 25px;
+}
+.card h3, h2 {
+    font-weight: 400;
+}
+.book_shelf h2 {
+    border-bottom: 3px solid rgb(25, 135, 84);
+}
